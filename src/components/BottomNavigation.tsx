@@ -15,7 +15,7 @@ export type BottomNavTab =
   | 'categories'
   | 'profile';
 
-interface BottomNavigationProps {
+export interface BottomNavigationProps {
   activeTab: BottomNavTab;
 }
 
@@ -23,12 +23,11 @@ interface NavItemConfig {
   key: BottomNavTab;
   icon: keyof typeof Ionicons.glyphMap;
   route: string;
-  replace?: boolean;
 }
 
 const NAV_ITEMS: NavItemConfig[] = [
-  { key: 'home', icon: 'home-outline', route: '/home', replace: true },
-  { key: 'analysis', icon: 'stats-chart-outline', route: '/quickly-analysis' },
+  { key: 'home', icon: 'home-outline', route: '/home' },
+  { key: 'analysis', icon: 'stats-chart-outline', route: '/analysis' },
   { key: 'transactions', icon: 'swap-horizontal-outline', route: '/transactions' },
   { key: 'categories', icon: 'layers-outline', route: '/categories' },
   { key: 'profile', icon: 'person-outline', route: '/profile' },
@@ -36,14 +35,10 @@ const NAV_ITEMS: NavItemConfig[] = [
 
 export function BottomNavigation({ activeTab }: BottomNavigationProps) {
   const handlePress = (item: NavItemConfig) => {
-    if (item.key === activeTab && item.replace) {
+    if (item.key === activeTab) {
       return;
     }
-    if (item.replace) {
-      router.replace(item.route as never);
-    } else {
-      router.push(item.route as never);
-    }
+    router.replace(item.route as never);
   };
 
   return (

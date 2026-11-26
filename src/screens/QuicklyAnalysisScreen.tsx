@@ -204,7 +204,7 @@ export function QuicklyAnalysisScreen() {
               <View style={styles.chartActions}>
                 <TouchableOpacity
                   activeOpacity={0.8}
-                  onPress={() => router.push('/analytics')}
+                  onPress={() => router.push('/search')}
                   style={styles.chartActionBadge}
                 >
                   <Ionicons name="search-outline" size={16} color={DARK_TEXT} />
@@ -291,7 +291,7 @@ export function QuicklyAnalysisScreen() {
                 <TouchableOpacity
                   key={tx.id}
                   activeOpacity={0.75}
-                  onPress={() => router.push('/transactions')}
+                  onPress={() => router.replace('/transactions')}
                   style={styles.txRow}
                 >
                   <View style={styles.txLeft}>
@@ -335,7 +335,7 @@ export function QuicklyAnalysisScreen() {
 
           <TouchableOpacity
             activeOpacity={0.8}
-            onPress={() => router.push('/analytics')}
+            onPress={() => {}}
             style={styles.navActivePill}
           >
             <Ionicons name="stats-chart-outline" size={22} color={DARK_TEXT} />
@@ -343,7 +343,7 @@ export function QuicklyAnalysisScreen() {
 
           <TouchableOpacity
             activeOpacity={0.8}
-            onPress={() => router.push('/transactions')}
+            onPress={() => router.replace('/transactions')}
             style={styles.navItem}
           >
             <Ionicons name="swap-horizontal-outline" size={22} color={DARK_TEXT} />
@@ -351,7 +351,7 @@ export function QuicklyAnalysisScreen() {
 
           <TouchableOpacity
             activeOpacity={0.8}
-            onPress={() => router.push('/categories')}
+            onPress={() => router.replace('/categories')}
             style={styles.navItem}
           >
             <Ionicons name="layers-outline" size={22} color={DARK_TEXT} />
@@ -359,7 +359,7 @@ export function QuicklyAnalysisScreen() {
 
           <TouchableOpacity
             activeOpacity={0.8}
-            onPress={() => router.push('/profile')}
+            onPress={() => router.replace('/profile')}
             style={styles.navItem}
           >
             <Ionicons name="person-outline" size={22} color={DARK_TEXT} />

@@ -12,11 +12,12 @@ import { router } from 'expo-router';
 const PRIMARY_GREEN = '#00D09E';
 const DARK_TEXT = '#093030';
 const SOFT_MINT = '#F1FFF3';
+const NEXT_ROUTE = '/home';
 
 export function PasswordChangedScreen() {
   useEffect(() => {
     const timer = setTimeout(() => {
-      router.replace('/security-fingerprint');
+      router.replace(NEXT_ROUTE);
     }, 1800);
 
     return () => clearTimeout(timer);
@@ -25,7 +26,7 @@ export function PasswordChangedScreen() {
   return (
     <TouchableOpacity
       activeOpacity={0.95}
-      onPress={() => router.replace('/security-fingerprint')}
+      onPress={() => router.replace(NEXT_ROUTE)}
       style={styles.root}
     >
       <StatusBar style="dark" />

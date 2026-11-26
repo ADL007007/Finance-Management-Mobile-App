@@ -324,7 +324,7 @@ export function HomeScreen() {
         <View style={styles.bottomNav}>
           <TouchableOpacity
             activeOpacity={0.8}
-            onPress={() => router.replace('/home')}
+            onPress={() => {}}
             style={styles.navActiveCircle}
           >
             <Ionicons name="home-outline" size={22} color={DARK_TEXT} />
@@ -332,7 +332,7 @@ export function HomeScreen() {
 
           <TouchableOpacity
             activeOpacity={0.8}
-            onPress={() => router.push('/analytics')}
+            onPress={() => router.replace('/analysis')}
             style={styles.navItem}
           >
             <Ionicons name="stats-chart-outline" size={22} color={DARK_TEXT} />
@@ -340,7 +340,7 @@ export function HomeScreen() {
 
           <TouchableOpacity
             activeOpacity={0.8}
-            onPress={() => router.push('/transactions')}
+            onPress={() => router.replace('/transactions')}
             style={styles.navItem}
           >
             <Ionicons name="swap-horizontal-outline" size={22} color={DARK_TEXT} />
@@ -348,7 +348,7 @@ export function HomeScreen() {
 
           <TouchableOpacity
             activeOpacity={0.8}
-            onPress={() => router.push('/categories')}
+            onPress={() => router.replace('/categories')}
             style={styles.navItem}
           >
             <Ionicons name="layers-outline" size={22} color={DARK_TEXT} />
@@ -356,7 +356,7 @@ export function HomeScreen() {
 
           <TouchableOpacity
             activeOpacity={0.8}
-            onPress={() => router.push('/profile')}
+            onPress={() => router.replace('/profile')}
             style={styles.navItem}
           >
             <Ionicons name="person-outline" size={22} color={DARK_TEXT} />
